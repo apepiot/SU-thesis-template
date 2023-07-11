@@ -32,7 +32,7 @@ In the **document.tex** file
 * by default this template is set up in french, i.e. the names of the TOC, bibliography,... are in french. You can change that easily by commenting the line **\usepackage[francais]{babel}** to use the english version.
 * to adapt the title page: replace the text between brackets [ ] in the section _%-- 1. TITLE PAGE FORMATING --%_ and the jury names in the table. Delete the lines that are not needed.
   
-N.B. if you prefer to use another template and delete this one (a), or to make this cover page separatly (b):
+N.B. if you prefer to use another template and delete this one (a), or to make this cover page separatly in another file (b):
 
 (a) Delete the blocks _%-- Commands to make the title page --%_ and _%-- 1. TITLE PAGE FORMATING --%_. Delete _\input{titlepage} \makeatother_ just after _\begin{document}_ and delete the file **titlepage.tex**.
 
