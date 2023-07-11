@@ -3,7 +3,17 @@
 Here is an **adaptation in LaTex of the Sorbonne Université PhD manuscript template**. The original template in Word can be found [here](https://www.sorbonne-universite.fr/le-doctorat/demarches-administratives/soutenance). 
 
 It contains 
-* a cover page including the logos, the title of the thesis, the doctoral school name, the jury, etc. (see the example in [document.pdf](https://github.com/apepiot/SU-thesis-template/blob/main/document.pdf) ).
+* a cover page including the logos, the title of the thesis, the doctoral school name, the jury, etc. (see the example in [document.pdf](https://github.com/apepiot/SU-thesis-template/blob/main/document.pdf)).
+* a dedication page
+* an acknowledgments page
+* the table of contents (TOC)
+* introduction
+* chapters 
+* the list of figures
+* the list of tables
+* the bibliography
+* appendices
+* a back page with the résumé/abstract
 
 ## About the template
 
@@ -18,6 +28,6 @@ The back page contains the résumé (fr) and the abstract (en).
 
 ## How to format this manuscript for your need 
 In the **document.tex** file
-* by default this template is set up in french, i.e. the names of the table of contents (TOC), bibliography,... are in french. You can change that easily by commenting the line **\usepackage[francais]{babel}** to use the english version
+* by default this template is set up in french, i.e. the names of the TOC, bibliography,... are in french. You can change that easily by commenting the line **\usepackage[francais]{babel}** to use the english version
 * to adapt the title page: fill the 
 
