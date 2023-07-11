@@ -30,7 +30,7 @@ The back page contains the résumé (fr) and the abstract (en).
 ## How to format this manuscript for your need 
 In the **document.tex** file
 * by default this template is set up in french, i.e. the names of the TOC, bibliography,... are in french. You can change that easily by commenting the line **\usepackage[francais]{babel}** to use the english version.
-* to adapt the title page: replace the text between brackets [ ] in the section _%-- 1. TITLE PAGE FORMATING --%_ and the jury names in the table. Delete some the lines that are not needed.
+* to adapt the title page: replace the text between brackets [ ] in the section _%-- 1. TITLE PAGE FORMATING --%_ and the jury names in the table. Delete the lines that are not needed.
 N.B. if you prefer to use another template (a), or to make this cover page in another file (b):
 delete (a) or cut/paste (b) the blocks _%-- Commands to make the title page --%_ and _%-- 1. TITLE PAGE FORMATING --%_ in a new file and delete _\input{titlepage} \makeatother_ just after _\begin{document}_.
 
