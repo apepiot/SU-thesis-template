@@ -1,4 +1,4 @@
-# Additionnal informations
+# Additional informations
 
 Here is an **adaptation in LaTex of the Sorbonne Université PhD manuscript template**. The original template in Word can be found [here](https://www.sorbonne-universite.fr/le-doctorat/demarches-administratives/soutenance). 
 
@@ -29,6 +29,6 @@ The back page contains the résumé (fr) and the abstract (en).
 
 ## How to format this manuscript for your need 
 In the **document.tex** file
-* by default this template is set up in french, i.e. the names of the TOC, bibliography,... are in french. You can change that easily by commenting the line **\usepackage[francais]{babel}** to use the english version
-* to adapt the title page: fill the 
+* by default this template is set up in french, i.e. the names of the TOC, bibliography,... are in french. You can change that easily by commenting the line **\usepackage[francais]{babel}** to use the english version.
+* to adapt the title page: replace the text between brackets [] in the section _%-- 1. TITLE PAGE FORMATING --%_.
 
