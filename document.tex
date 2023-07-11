@@ -1,0 +1,189 @@
+\documentclass[11pt,a4paper,twoside]{book}
+\usepackage[lmargin=3cm,rmargin=2.5cm,tmargin=2.5cm,bmargin=2.5cm]{geometry} %inside margin is bigger than outside margin
+\usepackage{graphicx} %for figures
+
+\usepackage[francais]{babel} %comments if you are writing your thesis in english
+
+\usepackage{minitoc} %to have mini table of contents/sommaire at the beginning of each chapter
+
+\usepackage{lipsum}
+
+\usepackage{tikz} %to create a frame in the résumé/abstract in the fouth cover
+
+%%% To create blank pages %%%
+\usepackage{afterpage}
+\makeatletter %@ as a letter, to use it in the following commands
+\newcommand*\cleartoleftpage{ % macro defining a command to force a page to be on the right side (e.g for resume/abstract page in particular)
+	\clearpage
+	\ifodd\value{page}\hbox{}\newpage\fi
+}
+\renewcommand*{\cleardoublepage}{\clearpage\if@twoside \ifodd\c@page\else
+	\hbox{}%
+	\thispagestyle{empty}%
+	\newpage%
+	\if@twocolumn\hbox{}\newpage\fi\fi\fi} %to put the following page on the right and add a blank page if necessary
+\makeatother %makes @ as a symbol/number again (comes with \makeatletter in the preamble)
+%%%%%
+
+%%% Defines headers and footers of each page %%%
+\usepackage{fancyhdr} 
+\pagestyle{fancy}
+\fancyhf{} %clears the headers
+\fancyhead[LE,RO]{\nouppercase\rightmark}
+\fancyhead[RE,LO]{\leftmark}
+\fancyfoot[CE,CO]{\thepage}
+%%%
+
+%%% 1. Commands to make the title page %%%
+%\usepackage{fullpage}
+\makeatletter %@ as a letter, to use it in the following commands
+\DeclareRobustCommand\subtitle[1]{\gdef\@subtitle{#1}}
+\DeclareRobustCommand\lab[1]{\gdef\@lab{#1}}
+\DeclareRobustCommand\rfield[1]{\gdef\@rfield{#1}}
+\DeclareRobustCommand\supervisors[1]{\gdef\@supervisors{#1}}
+\DeclareRobustCommand\defdate[1]{\gdef\@defdate{#1}}
+\DeclareRobustCommand\docschool[1]{\gdef\@docschool{#1}}
+\DeclareRobustCommand\logoLab[1]{\gdef\@logoLab{#1}}
+%-------------%
+
+%%% 2. TITLE PAGE FORMATING %%%
+\logoLab{defaultLogoLab} %fill with the name of the logo of your lab
+\docschool{[Ecole doctorale]}
+\author{[Prenom NOM]}
+\title{\LARGE{Ending the HIV epidemic thanks to voluntary testing? A game theoretical approach.}}
+\title{[Ecrire ici le titre de la thèse en français.
+	 Voici un titre qui est long car il est sur plusieurs lignes. Ajoutons encore une ligne.]}
+\subtitle{[sous titre un peu long, sous titre un peu long  sous titre un peu long  sous titre un peu long  sous titre un peu long]}
+\lab{[Laboratoire / Equipe de recherche]}
+\rfield{[Discipline]} % Rsearch field, e.g. biomathematics
+\supervisors{Prenom(s) NOM(S)} %Prénom et Nom du (ou des) Directeur(s) de thèse
+\date{\today}
+\defdate{[date de soutenance]}
+\newcommand{\jury}{
+	\begin{tabular}{lclcl}
+		Prenom NOM &~& Maitre de conférence &~& Examinateur.ice\\ 
+		Prenom NOM &~& Fonction &~& Role\\
+		Prenom NOM &~& Fonction &~& Role\\
+		Prenom NOM &~& Fonction &~& Role\\
+		Prenom NOM &~& Fonction &~& Role\\
+		Prenom NOM &~& Fonction &~& Directeur.ice\\
+	\end{tabular}	
+}
+%-------------%
+
+
+\begin{document}
+	
+	%%% 3. Makes the title page %%%
+	\input{titlepage}
+	\makeatother %makes @ as a symbol/number again (comes with \makeatletter in the preamble)
+	
+	%%% 4. Dedication page %%%	
+	%\afterpage{\blankpage} %blank page
+	\cleardoublepage 
+	\thispagestyle{empty} %deletes header and footers of the page
+	\vspace*{5cm}
+	\null\hfill\textit{[Dedicace]}
+
+	\pagenumbering{roman} % numbering of each page with roman numerals (i,ii,iii...)$
+	
+	\cleardoublepage
+	
+	%%% 5. Acknowledgments/Remerciements %%%
+	\chapter*{Acknowledgments/Remerciements} 
+	\thispagestyle{plain} %deletes header of the page
+	\lipsum[1-3]
+	\cleardoublepage
+	
+	%%% 6. Tables of contents/Sommaires %%%
+	\dominitoc %to make small table of contents/sommaire at the beginning of each chapter [can be deleted if not needed]
+	\tableofcontents %print the global table of contents/sommaire of the manuscript
+	\cleardoublepage
+
+	\pagenumbering{arabic}
+	
+	\chapter*{Introduction}
+	\addcontentsline{toc}{chapter}{Introduction} %adds this section in the table of contents	
+	\markboth{Introduction}{Introduction} %header
+	\lipsum[1-5]
+	\thispagestyle{plain} %deletes header of the page
+	
+	\adjustmtc %to adjust minitoc after a unumbered chapter (like introduction before)
+	
+	\chapter{Title of the chapter 1}
+	\minitoc % Creates the toc of chapter 1
+	\section{Section 1.1}
+	\subsection{Subsection 1.1}
+	\subsubsection{Subsection 1.1}
+	\paragraph{Paragraph 1}
+	\lipsum[1-15]
+	
+	\section{Section 1.2}
+	\subsection{Subsection 1.2}
+	\subsubsection{Subsection 1.2}
+	\paragraph{Paragraph 1.2}
+	
+	\chapter{Title of the chapter 2}
+	\minitoc % Creates the toc of chapter 2
+	\section{Section 2.1}
+	\subsection{Subsection 2.1}
+	\subsubsection{Subsection 2.1}
+	\paragraph{Paragraph 1}
+	\section{Section 2.2}
+	\subsection{Subsection 2.2}
+	\subsubsection{Subsection 2.2}
+	\paragraph{Paragraph 2.2}
+	Normal size here
+	
+
+	%%% Print the table of figures %%%
+	\addcontentsline{toc}{chapter}{Figures} %adds this section in the table of contents
+	\listoffigures 
+	\cleardoublepage
+	
+	%%% Print the table of tables %%%
+	\addcontentsline{toc}{chapter}{Tables} %adds this section in the table of contents
+	\listoftables 
+	
+	
+	%%% Bibliography %%%
+	%\renewcommand\bibname{References} %changes the name of the bibliography
+	\addcontentsline{toc}{chapter}{\bibname}
+	\bibliographystyle{unsrt}
+	\bibliography{references}
+	
+	%%% Appendix %%%
+	\appendix %starts numbering chapter/sections with A (e.g. A.1, A.2...)
+	\chapter{name of appendix 1}
+	\chapter{name of appendix 2}
+	\lipsum[1-2]
+	
+	%\newpage
+	\cleardoublepage
+	\thispagestyle{empty}
+		
+	%%% COVER PAGE RESUME(fr)/ABSTRACT(en) %%%
+	\cleartoleftpage %to make this page on the left side
+	\newgeometry{left=2.5cm,right=2.5cm,bottom=0.1cm,top=3cm} %centers the page with equally margins
+	\thispagestyle{plain}
+	
+	%% the following adds a frame around the résumé/abstract
+	\tikz[overlay, remember picture] \draw ([xshift=1cm,yshift=-1cm]current page.north west) rectangle ([xshift=-1cm,yshift=1cm]current page.south east);
+	\tikz[overlay, remember picture] \draw ([xshift=.7cm,yshift=-.7cm]current page.north west) rectangle ([xshift=-.7cm,yshift=.7cm]current page.south east);
+	%%%
+	
+	\section*{Résumé}
+	\lipsum[1-2]\\
+	%write the résumé here (in french)
+	\noindent Mots clés : [----------]\\ %add mots clés
+	\vspace*{1cm}
+	
+	\noindent \textbf{[Titre de la thèse en anglais]}
+	\section*{Abstract}
+	\lipsum[1-2]\\
+	%write the abstract here in english
+	
+	\noindent Keywords: [----------] %add keywords
+		
+\end{document}
+
