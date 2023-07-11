@@ -6,11 +6,11 @@
 
 \usepackage{minitoc} %to have mini table of contents/sommaire at the beginning of each chapter
 
-\usepackage{lipsum}
+\usepackage{lipsum} 
 
 \usepackage{tikz} %to create a frame in the résumé/abstract in the fouth cover
 
-%%% To create blank pages %%%
+%-- To create blank pages --%
 \usepackage{afterpage}
 \makeatletter %@ as a letter, to use it in the following commands
 \newcommand*\cleartoleftpage{ % macro defining a command to force a page to be on the right side (e.g for resume/abstract page in particular)
@@ -23,18 +23,20 @@
 	\newpage%
 	\if@twocolumn\hbox{}\newpage\fi\fi\fi} %to put the following page on the right and add a blank page if necessary
 \makeatother %makes @ as a symbol/number again (comes with \makeatletter in the preamble)
-%%%%%
+%------------------------------%
 
-%%% Defines headers and footers of each page %%%
+%-- Defines headers and footers of each page --%
 \usepackage{fancyhdr} 
 \pagestyle{fancy}
 \fancyhf{} %clears the headers
-\fancyhead[LE,RO]{\nouppercase\rightmark}
-\fancyhead[RE,LO]{\leftmark}
+\fancyhead[LE,RO]{\nouppercase\rightmark} %section name
+\fancyhead[RE,LO]{\leftmark}              %chapter name
 \fancyfoot[CE,CO]{\thepage}
-%%%
+%header alternates from odd page to even page
+%------------------------------%
 
-%%% 1. Commands to make the title page %%%
+
+%-- Commands to make the title page --% %do not delete, except if you do not want to use the suggested title page
 %\usepackage{fullpage}
 \makeatletter %@ as a letter, to use it in the following commands
 \DeclareRobustCommand\subtitle[1]{\gdef\@subtitle{#1}}
@@ -44,9 +46,9 @@
 \DeclareRobustCommand\defdate[1]{\gdef\@defdate{#1}}
 \DeclareRobustCommand\docschool[1]{\gdef\@docschool{#1}}
 \DeclareRobustCommand\logoLab[1]{\gdef\@logoLab{#1}}
-%-------------%
+%------------------------------%
 
-%%% 2. TITLE PAGE FORMATING %%%
+%-- 1. TITLE PAGE FORMATING --%
 \logoLab{defaultLogoLab} %fill with the name of the logo of your lab
 \docschool{[Ecole doctorale]}
 \author{[Prenom NOM]}
@@ -69,16 +71,16 @@
 		Prenom NOM &~& Fonction &~& Directeur.ice\\
 	\end{tabular}	
 }
-%-------------%
+%------------------------------%
 
 
 \begin{document}
 	
-	%%% 3. Makes the title page %%%
+	%%% Makes the title page %%%
 	\input{titlepage}
 	\makeatother %makes @ as a symbol/number again (comes with \makeatletter in the preamble)
 	
-	%%% 4. Dedication page %%%	
+	%%% Dedication page %%%	
 	%\afterpage{\blankpage} %blank page
 	\cleardoublepage 
 	\thispagestyle{empty} %deletes header and footers of the page
@@ -89,13 +91,13 @@
 	
 	\cleardoublepage
 	
-	%%% 5. Acknowledgments/Remerciements %%%
+	%%% Acknowledgments/Remerciements %%%
 	\chapter*{Acknowledgments/Remerciements} 
 	\thispagestyle{plain} %deletes header of the page
 	\lipsum[1-3]
 	\cleardoublepage
 	
-	%%% 6. Tables of contents/Sommaires %%%
+	%%% Tables of contents/Sommaires %%%
 	\dominitoc %to make small table of contents/sommaire at the beginning of each chapter [can be deleted if not needed]
 	\tableofcontents %print the global table of contents/sommaire of the manuscript
 	\cleardoublepage
@@ -162,26 +164,27 @@
 	\cleardoublepage
 	\thispagestyle{empty}
 		
+	
 	%%% COVER PAGE RESUME(fr)/ABSTRACT(en) %%%
 	\cleartoleftpage %to make this page on the left side
 	\newgeometry{left=2.5cm,right=2.5cm,bottom=0.1cm,top=3cm} %centers the page with equally margins
 	\thispagestyle{plain}
 	
-	%% the following adds a frame around the résumé/abstract
+	%% the following commands add a frame around the résumé/abstract
 	\tikz[overlay, remember picture] \draw ([xshift=1cm,yshift=-1cm]current page.north west) rectangle ([xshift=-1cm,yshift=1cm]current page.south east);
 	\tikz[overlay, remember picture] \draw ([xshift=.7cm,yshift=-.7cm]current page.north west) rectangle ([xshift=-.7cm,yshift=.7cm]current page.south east);
-	%%%
+	%--%
 	
 	\section*{Résumé}
 	\lipsum[1-2]\\
-	%write the résumé here (in french)
+	%replace lipsum[1-2] with your the résumé here (in french)
 	\noindent Mots clés : [----------]\\ %add mots clés
 	\vspace*{1cm}
 	
 	\noindent \textbf{[Titre de la thèse en anglais]}
 	\section*{Abstract}
 	\lipsum[1-2]\\
-	%write the abstract here in english
+	%replace lipsum[1-2] with you abstract here in english
 	
 	\noindent Keywords: [----------] %add keywords
 		
