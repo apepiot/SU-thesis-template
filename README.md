@@ -24,6 +24,7 @@ The back page contains the résumé (fr) and the abstract (en).
 ## How to start
 1. Download all the files. Keep the structure as it is in this repository. In particular, do not change the name of the **logos** folder.
 2. Upload the logo of your lab in the logos folder. Accepted formats: png, pdf, jpg.
+3. Open **document.tex** with your favourite LaTeX editor and compile.
 
 
 ## How to format this manuscript for your need 
