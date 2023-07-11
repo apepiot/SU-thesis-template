@@ -29,7 +29,7 @@ The back page contains the résumé (fr) and the abstract (en).
 
 
 ## How to format this manuscript for your need 
-Changes to make in the **document.tex** file
+Changes to make in the **document.tex** file:
 * by default this template is set up in french, i.e. the names of the TOC, bibliography,... are in french. You can change that easily by commenting the line **\usepackage[francais]{babel}** to use the english version.
 * to adapt the title page: replace the text between brackets [ ] in the section _%-- 1. TITLE PAGE FORMATING --%_ and the jury names in the table. Delete the lines that are not needed.
 You shouldn't need to look into the **titlepage.tex** file. But you can if you want, to change the rendering of the cover page.
@@ -39,5 +39,7 @@ N.B. if you prefer to use another template and delete this one (a), or to make t
 (a) Delete the blocks _%-- Commands to make the title page --%_ and _%-- 1. TITLE PAGE FORMATING --%_. Delete _\input{titlepage} \makeatother_ just after _\begin{document}_ and delete the file **titlepage.tex**.
 
 (b) Create a new .tex file, cut/paste the blocks _%-- Commands to make the title page --%_ and _%-- 1. TITLE PAGE FORMATING --%_ in the preamble of this file. Add  _\input{titlepage} \makeatother_ just after _\begin{document}_. And make sure that **titlepage.tex** is in the same folder as your .tex file.
+
+* at the beginning of each chapter, the TOC of the chapter is printed with the _\minitoc_ command. You can delete it if you don't need it.
 
 
