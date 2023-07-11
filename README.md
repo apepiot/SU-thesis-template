@@ -40,6 +40,10 @@ N.B. if you prefer to use another template and delete this one (a), or to make t
 
 (b) Create a new .tex file. Cut/paste the blocks _%-- Commands to make the title page --%_ and _%-- 1. TITLE PAGE FORMATING --%_ in the preamble of this file. Cute/paste  _\input{titlepage} \makeatother_ just after _\begin{document}_. And make sure that **titlepage.tex** is in the same folder as your .tex file.
 
+* if you don't need the dedication page delete the block _%%% Dedication page %%%	_.
+
 * at the beginning of each chapter, the TOC of the chapter is printed with the _\minitoc_ command. You can delete it if you don't need it.
+
+* if you want to get rid of the frame in the back page delete the lines starting with _\tikz..._.
 
 
