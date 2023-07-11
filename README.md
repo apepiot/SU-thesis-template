@@ -3,7 +3,7 @@
 Here is an **adaptation in LaTex of the Sorbonne Université PhD manuscript template**. The original template in Word can be found [here](https://www.sorbonne-universite.fr/le-doctorat/demarches-administratives/soutenance). 
 
 It contains 
-* a cover page including the logos, the title of the thesis, the doctoral school name, the jury, etc. (see the example in document.pdf)
+* a cover page including the logos, the title of the thesis, the doctoral school name, the jury, etc. (see the example in [document.pdf](https://github.com/apepiot/SU-thesis-template/blob/main/document.pdf) ).
 
 ## About the template
 
