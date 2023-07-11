@@ -38,7 +38,7 @@ N.B. if you prefer to use another template and delete this one (a), or to make t
 
 (a) Delete the blocks _%-- Commands to make the title page --%_ and _%-- 1. TITLE PAGE FORMATING --%_. Delete _\input{titlepage} \makeatother_ just after _\begin{document}_ and delete the file **titlepage.tex**.
 
-(b) Create a new .tex file, cut/paste the blocks _%-- Commands to make the title page --%_ and _%-- 1. TITLE PAGE FORMATING --%_ in the preamble of this file. Add  _\input{titlepage} \makeatother_ just after _\begin{document}_. And make sure that **titlepage.tex** is in the same folder as your .tex file.
+(b) Create a new .tex file. Cut/paste the blocks _%-- Commands to make the title page --%_ and _%-- 1. TITLE PAGE FORMATING --%_ in the preamble of this file. Add  _\input{titlepage} \makeatother_ just after _\begin{document}_. And make sure that **titlepage.tex** is in the same folder as your .tex file.
 
 * at the beginning of each chapter, the TOC of the chapter is printed with the _\minitoc_ command. You can delete it if you don't need it.
 
