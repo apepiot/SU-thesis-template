@@ -34,7 +34,7 @@ Changes to make in the **document.tex** file:
 * to adapt the title page: replace the text between brackets [ ] in the section _%-- 1. TITLE PAGE FORMATING --%_ and the jury names in the table. Delete the lines that are not needed.
 You shouldn't need to look into the **titlepage.tex** file. But you can if you want to change the rendering of the cover page.
   
-N.B. if you prefer to use another template and delete this one (a), or to make this cover page separatly in another file (b):
+N.B. if you prefer to use another template for the cover page and delete the suggested one (a), or to make this cover page separatly in another file (b):
 
 (a) Delete the blocks _%-- Commands to make the title page --%_ and _%-- 1. TITLE PAGE FORMATING --%_. Delete _\input{titlepage} \makeatother_ just after _\begin{document}_ and delete the file **titlepage.tex**.
 
